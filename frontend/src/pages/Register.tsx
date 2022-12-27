@@ -20,16 +20,15 @@ export default function Register() {
     })
 
     return ( <>
-        <h1>Register</h1>
-        <form onSubmit={onFinish}>
-            <label htmlFor="name">Nome</label>
-            <input type="text" {...register('name')} />
-            <label htmlFor="email">Email</label>
-            <input type="text" {...register('email')} />
-            <label htmlFor="password">Senha</label>
-            <input type="password" {...register('password')} />
-            <button>Registrar</button>
-        </form>
-        <span>Já tem uma conta? Então clique <Link to='/login'>aqui</Link> para fazer seu login</span>
+        <div className="formulario">
+            <h1>Cadastro</h1>
+            <form onSubmit={onFinish}>
+                <input type="text" placeholder="Nome"{...register('name')} />
+                <input type="text" placeholder="Email"{...register('email')} />
+                <input type="password" placeholder="Senha"{...register('password')} />
+                <button>Cadastrar</button>
+            </form>
+            <span>Já tem uma conta? Então clique <Link to='/login'>aqui</Link> para fazer seu login</span>
+        </div>
     </>)
 }

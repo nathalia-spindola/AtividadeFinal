@@ -30,15 +30,15 @@ export default function Login({logged, setLogged}: Props) {
     })
 
     return (<>
-        <h1>Login</h1>
-        <form onSubmit={onFinish}>
-            <label htmlFor='email'>Email</label>
-            <input type="email" {...register('email')} onChange={() => setError(null)}></input>
-            <label htmlFor='password'>Password</label>
-            <input type="password" {...register('password')} onChange={() => setError(null)} />
-            <button>Login</button>
-        </form>
-        <span>Não tem uma conta? Crie unma agora mesmo clicando <Link to={'/register'}>aqui</Link> </span>
+        <div className='formulario'>
+            <h1>Login</h1>
+            <form onSubmit={onFinish}>
+                <input type="email" placeholder='Email'{...register('email')} onChange={() => setError(null)}></input>
+                <input type="password" placeholder='Senha'{...register('password')} onChange={() => setError(null)} />
+                <button>Entrar</button>
+            </form>
+        <span>Não tem uma conta? Crie uma agora mesmo clicando <Link to={'/register'}>aqui</Link> </span>
         { error ? <p>Algum erro aconteceu, tente novamente</p> : ''}
+        </div>
     </>)
 } 

@@ -31,12 +31,14 @@ export default function Pomodoro() {
   const timerSeconds = seconds < 10 ? `0${seconds}` : seconds;
 
   return (
-    <div className="pomodoro">
-      <div className="message">
-        {displayMessage && <div>Break time! New session starts in:</div>}
-      </div>
-      <div className="timer">
-        {timerMinutes}:{timerSeconds}
+    <div className="container">
+      <div className="pomodoro">
+        <div className="message">
+          {displayMessage && <div>Relaxe! A próxima seção começa em:</div>}
+        </div>
+        <div className="timer">
+          {timerMinutes}:{timerSeconds}
+        </div>
       </div>
     </div>
   );
